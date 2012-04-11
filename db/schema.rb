@@ -11,14 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120304170453) do
+ActiveRecord::Schema.define(:version => 20120410213523) do
 
-  create_table "products", :force => true do |t|
+  create_table "opro_access_grants", :force => true do |t|
+    t.string   "code"
+    t.string   "access_token"
+    t.string   "refresh_token"
+    t.datetime "access_token_expires_at"
+    t.integer  "user_id"
+    t.integer  "application_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
+
+  create_table "opro_client_applications", :force => true do |t|
     t.string   "name"
-    t.hstore   "data"
+    t.string   "app_id"
+    t.string   "app_secret"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
