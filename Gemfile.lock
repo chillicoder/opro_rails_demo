@@ -126,6 +126,9 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
+    wicked (0.1.4)
+      activesupport (>= 3.0.7)
+      rails (>= 3.0.7)
 
 PLATFORMS
   ruby
@@ -140,3 +143,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   twitter-bootstrap-rails (~> 2.0.1.0)
   uglifier (>= 1.0.3)
+  wicked
