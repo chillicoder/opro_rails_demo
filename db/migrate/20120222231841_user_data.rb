@@ -2,7 +2,7 @@ class UserData < ActiveRecord::Migration
   def up
     add_column :users, :zip,          :string
     add_column :users, :phone_number, :string
-    add_column :users, :twitter,      :boolean
+    add_column :users, :twitter,      :string
   end
 
   def down

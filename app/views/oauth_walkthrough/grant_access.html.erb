@@ -1,0 +1,17 @@
+<h2>Step 2: Authorize your App</h2>
+
+<p>
+  Now that you've got an app, you'll need to give it access like a regular user would need to.
+</p>
+
+<p>Click on the app below you would like to authorize, it will take you to <code><%= oauth_authorize_path %></code> with the propper client_id and redirect_uri:</p>
+
+<% @client_apps.each do |app| %>
+  <% app_authorize_url = oauth_authorize_path(:client_id => app.client_id, :redirect_uri => oauth_walkthrough_path(:get_access_token, :client_id => app.client_id)) %>
+  <%= link_to "Authorize: #{app.name}", app_authorize_url, :class => 'btn btn-primary' %>
+<% end %>
+
+<hr />
+<p>
+  <%= link_to 'Next', '/#wizardur' %>
+</p>

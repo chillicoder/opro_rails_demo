@@ -4,12 +4,9 @@ Example::Application.routes.draw do
 
   root        :to => "pages#index"
 
-  resources   :after_register
-
   resources   :users
-  resources   :products
-  resources   :hstore_queries
 
+  resources :oauth_walkthrough
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

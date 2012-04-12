@@ -1,1 +1,37 @@
-<h2>Example</h2>
+<h2>Opro Example</h2>
+
+<%- if current_user.blank? -%>
+  <p>
+    Welcome, to get started with Opro first <%= link_to 'sign up', new_user_registration_path %> and then head over to the built in <%= link_to 'quick start guide', oauth_doc_path(:quick_start) %>.
+  </p>
+<%- else -%>
+  <p>
+    You're all signed in, you can read the built in <%= link_to 'quick start guide', oauth_doc_path(:quick_start) %> or be guided step by step
+
+    <%= link_to 'Create an OAuth Client App!' , oauth_walkthrough_path(:create_app), :class => 'btn btn-primary' %>
+
+  </p>
+
+  <p>
+    <ul>
+      <li><%= link_to 'View your Profile', user_path(current_user) %></li>
+      <li><%= link_to 'View your OAuth client Apps',  oauth_client_applications_path %></li>
+      <li><%= link_to 'Create new Oauth Client App', new_oauth_client_application_path %></li>
+    </ul>
+  </p>
+  <hr />
+<%- end -%>
+
+<h2>What is Opro?</h2>
+
+
+
+<p>
+  Opro is a an Oauth Provider that you can plug into any Rails 3 application.
+</p>
+
+<ul>
+  <li><%= link_to 'Code', 'http://github.com/schneems/opro' %></li>
+  <li><%= link_to 'Why would I use this?', 'http://github.com/schneems/opro' %></li>
+  <li><%= link_to 'Quick Start Guide', oauth_doc_path(:quick_start) %></li>
+</ul>
