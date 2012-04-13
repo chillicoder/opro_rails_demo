@@ -38,7 +38,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.3.0)
+    coffee-script-source (1.3.1)
     commonjs (0.2.5)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
@@ -68,7 +68,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.2.0)
-    opro (0.0.1.pre1.0.1)
+    opro (0.0.1.pre1.0.2)
       activesupport (>= 3.0.7)
       bluecloth
       rails (>= 3.0.7)
@@ -137,7 +137,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise (~> 2.0.4)
   jquery-rails
-  opro (= 0.0.1.pre1.0.1)
+  opro (~> 0.0.1.pre1.0.1)
   pg
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)

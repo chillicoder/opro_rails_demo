@@ -8,7 +8,7 @@ gem 'rails', '3.2.2'
 gem 'pg'
 
 
-gem 'opro', '0.0.1.pre1.0.1'
+gem 'opro', '~> 0.0.1.pre1.0.1'
 
 gem 'wicked'
 
