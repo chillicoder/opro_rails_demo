@@ -6,9 +6,10 @@
   </p>
 
 <h2>Why Sign up?</h2>
-<p>Once you sign up you can create a fully functioning OAuth key for your user, without a user account this demo is pretty much non functional</p>
+<p>Once you sign up, you can create a fully functioning OAuth key for your user. Without a user account this demo is pretty much non functional</p>
 
-<p>We're not using your info for anything, you will never receive emails from us. This is just for a demo.</p>
+<%= link_to 'Create Random User Account', users_random_index_path, :class => 'btn btn-primary', :method => :post %>
+
 <%- else -%>
   <p>
     You're all signed in, you can read the built in <%= link_to 'quick start guide', oauth_doc_path(:quick_start) %> or be guided step by step
@@ -40,3 +41,6 @@
   <li><%= link_to 'Why would I use this?', 'http://github.com/schneems/opro' %></li>
   <li><%= link_to 'Quick Start Guide', oauth_doc_path(:quick_start) %></li>
 </ul>
+
+
+<%# link_to 'sign out', destroy_user_session_path, :method => :delete %>

@@ -8,6 +8,10 @@ Example::Application.routes.draw do
 
   resources :oauth_walkthrough
 
+  namespace :users do
+    resources :random, :only => 'create'
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -14,9 +14,13 @@ class User < ActiveRecord::Base
     to_public_hash.to_json
   end
 
+  def self.create_random!
+    random = rand(1000).to_s + Time.now.to_f.to_s
+    User.create(:email => "#{random}@foo.com", :password => random, :password_confirmation => random)
+  end
+
   def to_public_hash(options = {})
     user_hash = self.attributes
-    user_hash.delete('email')
     user_hash.delete('encrypted_password')
     user_hash.delete('last_sign_in_ip')
     user_hash.delete('current_sign_in_ip')
