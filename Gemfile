@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,7 +8,7 @@ gem 'rails', '3.2.2'
 gem 'pg'
 
 
-gem 'opro', '~> 0.0.1.pre1.0.1'
+gem 'opro', :git => 'git@github.com:schneems/opro.git'
 
 gem 'wicked'
 

@@ -1,5 +1,9 @@
 Example::Application.routes.draw do
 
+  mount_opro_oauth
+
+  resources :products
+
   devise_for  :users
 
   root        :to => "pages#index"

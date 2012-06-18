@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :authenticate_user!, :only => :update
+  before_filter :authenticate_user!
 
   allow_oauth! :except => :delete
 
@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     @user =   current_user if params[:id] == 'me'
     @user ||= User.find(params[:id])
     respond_to do |format|
+      format.html
       format.json do
         # User#to_public_json will remove sensitive elements from the user object
         render :json => @user.to_public_json
