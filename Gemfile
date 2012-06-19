@@ -8,7 +8,7 @@ gem 'rails', '3.2.6'
 gem 'pg'
 
 
-gem 'opro', :git => 'git@github.com:schneems/opro.git'
+gem 'opro',  '~> 0.1.0'
 
 gem 'wicked'
 

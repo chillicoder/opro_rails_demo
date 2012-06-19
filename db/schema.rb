@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120618090131) do
+ActiveRecord::Schema.define(:version => 20120619013133) do
 
   create_table "opro_auth_grants", :force => true do |t|
     t.string   "code"
@@ -33,12 +33,6 @@ ActiveRecord::Schema.define(:version => 20120618090131) do
     t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "products", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

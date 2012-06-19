@@ -1,6 +1,7 @@
 Example::Application.routes.draw do
 
-  mount_opro_oauth
+
+  mount_opro_oauth :controllers => {:oauth_client_apps => 'oauth/client_apps'}
 
   resources :products
 

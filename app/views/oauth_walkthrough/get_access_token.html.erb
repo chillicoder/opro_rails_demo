@@ -13,7 +13,7 @@ If everything worked correctly you should see <code>code=</code> in the addressb
   We need to exchange this for an actual auth token by sending a request to this beastly url:
   <pre><code><%= my_oauth_url = oauth_token_path(:client_id => @client_app.client_id, :client_secret => @client_app.secret, :code => params[:code], :format => :json) %></code></pre>
 
-  <%= button_to 'Get Access Token Now', my_oauth_url, :remote => true, :id => 'accessTokenButton'%>
+  <%= button_to 'Get Access Token Now', my_oauth_url, :remote => true, :id => 'accessTokenButton', :class => 'btn btn-primary'%>
 
   <div class='spinner hide'><%= image_tag 'spinner.gif' %></div>
 
