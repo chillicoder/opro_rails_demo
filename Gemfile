@@ -9,7 +9,7 @@ gem 'pg'
 
 gem 'unicorn'
 
-gem 'opro',  '~> 0.1.0'
+gem 'opro',  '~> 0.3.0.pre'
 
 gem 'wicked'
 
