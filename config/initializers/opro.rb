@@ -16,6 +16,6 @@ Opro.setup do |config|
   # config.require_refresh_within = 1.month
 
 
-  config.allow_password_exchange = true
+  config.password_exchange_enabled = true
 
 end
