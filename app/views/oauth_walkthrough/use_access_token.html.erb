@@ -23,6 +23,10 @@ You can change twitter, email, zip, and phone_number, then you can curl your use
 <br /><br />
 <pre><code>curl <%= user_url(:me, :access_token => @token, :format => :json) %></code></pre>
 
+<h3>Use Access Token in Header</h3>
+
+<pre><code>curl <%= oauth_test_url(:test_me, :format => :json) %></code></pre>
+
 
 <hr />
 
