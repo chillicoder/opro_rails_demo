@@ -25,7 +25,9 @@ You can change twitter, email, zip, and phone_number, then you can curl your use
 
 <h3>Use Access Token in Header</h3>
 
-<pre><code>curl <%= oauth_test_url(:test_me, :format => :json) %></code></pre>
+<p>You can also use a header to pass the oauth token, if you prefer.</p>
+
+<pre><code> curl -H "Authorization: token <%= @token %>" "<%= oauth_test_url(:test_me, :format => :json) %>"</code></pre>
 
 
 <hr />
