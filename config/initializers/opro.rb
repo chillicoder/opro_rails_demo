@@ -13,7 +13,7 @@ Opro.setup do |config|
   ## Refresh Token config
   # uncomment `config.require_refresh_within` to require refresh tokens
   # this will expire tokens within the given time duration
-  # config.require_refresh_within = 1.month
+  config.require_refresh_within = 10000.years
 
 
   config.password_exchange_enabled = true
