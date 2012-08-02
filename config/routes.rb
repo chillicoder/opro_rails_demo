@@ -1,5 +1,6 @@
 Example::Application.routes.draw do
 
+  match 'users/random' => 'users/random#create', :controller => "users/random", :as => "users_random"
 
   mount_opro_oauth :controllers => {:oauth_client_apps => 'oauth/client_apps'}
 
@@ -12,10 +13,6 @@ Example::Application.routes.draw do
   resources   :users
 
   resources :oauth_walkthrough
-
-  namespace :users do
-    resources :random, :only => 'create'
-  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

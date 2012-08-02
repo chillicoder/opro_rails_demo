@@ -14,9 +14,8 @@ class User < ActiveRecord::Base
     to_public_hash.to_json
   end
 
-  def self.create_random!
-    random = rand(1000).to_s + Time.now.to_f.to_s
-    User.create(:email => "#{random}@foo.com", :password => random, :password_confirmation => random)
+  def self.random
+    rand(1000).to_s + Time.now.to_f.to_s
   end
 
   def to_public_hash(options = {})
