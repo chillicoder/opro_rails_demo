@@ -24,6 +24,11 @@ class User < ActiveRecord::Base
     user_hash.delete('last_sign_in_ip')
     user_hash.delete('current_sign_in_ip')
     user_hash.delete('reset_password_token')
+    user_hash.delete('created_at')
+    user_hash.delete('current_sign_in_at')
+    user_hash.delete('remember_created_at')
+    user_hash.delete('reset_password_sent_at')
+    user_hash.delete('sign_in_count')
     user_hash
   end
 end
