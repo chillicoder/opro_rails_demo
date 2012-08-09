@@ -29,6 +29,8 @@ class User < ActiveRecord::Base
     user_hash.delete('remember_created_at')
     user_hash.delete('reset_password_sent_at')
     user_hash.delete('sign_in_count')
+    user_hash.delete('admin')
+    user_hash.delete('github_access_token')
     user_hash
   end
 end
