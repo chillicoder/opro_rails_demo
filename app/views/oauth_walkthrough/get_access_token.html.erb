@@ -14,6 +14,7 @@ If everything worked correctly you should see <code>code=</code> in the addressb
   <pre><code><%= my_oauth_url = oauth_token_path(:client_id => @client_app.client_id, :client_secret => @client_app.secret, :code => params[:code], :format => :json) %></code></pre>
 
   <%= button_to 'Get Access Token Now', my_oauth_url, :remote => true, :id => 'accessTokenButton', :class => 'btn btn-primary'%>
+Note: it only works on the first request, if you forget your access token you need to go <%= link_to "back", previous_wizard_path %> to re-authorize your application.
 
   <div class='spinner hide'><%= image_tag 'spinner.gif' %></div>
 
@@ -36,6 +37,7 @@ If everything worked correctly you should see <code>code=</code> in the addressb
     $('.button_to').bind("ajax:beforeSend", function(){
       $('.result').hide();
       $('.spinner').show();
+      $(this).hide();
     }).bind('ajax:success', function(evt, data, status, xhr){
       $('.result').show();
       $('.spinner').hide();
