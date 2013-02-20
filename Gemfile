@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 3.2.11'
+gem 'bundler'
+gem 'rack'
+gem 'puma'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -15,6 +18,8 @@ gem 'wicked'
 
 # Gems used only for assets and not required
 # in production environments by default.
+gem 'quiet_assets'
+
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
@@ -28,8 +33,15 @@ end
 gem 'jquery-rails'
 
 gem 'devise'
+gem 'devise-encryptable'
 
 gem "twitter-bootstrap-rails"
+
+# the might-not-be-good-gems
+gem 'omniauth'
+gem 'omniauth-oauth2'
+
+gem 'fog'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
